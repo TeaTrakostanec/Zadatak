@@ -1,0 +1,14 @@
+.table__wrap {
+    margin-bottom: 50px;
+}
+
+.table {
+    height: 540px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+.chart__wrap {
+    margin-bottom: 35px;
+}

@@ -1,0 +1,44 @@
+<main class="main">
+  <div class="container">
+    <div class="table__wrap">
+      <table class="table" id="myTable" (scroll)="showMoreRows()">
+        <thead>
+          <tr>
+            <th scope="col">
+              KRIPTOVALUTA
+            </th>
+            <th *ngFor="let currency of currencies">
+              {{currency}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of cyrptoData.slice(0, rowsShown).reverse(); let i = index">
+            <td>
+              {{i + 1}} - {{data.cryptoName}}
+            </td>
+            <td *ngFor="let cValue of currencies">
+              {{data.cryptoValue[cValue]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-dark" (click)="exportToXslx()">Export to excel</button>
+      <!-- <button class="export">Export CSV</button> -->
+    </div>
+    <div class="chart">
+      <div class="chart__wrap">
+        <canvas *ngIf="chartCurrencyData" id="canvasBTC">{{ chart }}</canvas>
+      </div>
+      <div class="chart__wrap">
+        <canvas *ngIf="chartCurrencyData" id="canvasUSD">{{ chart }}</canvas>
+      </div>
+      <div class="chart__wrap">
+        <canvas *ngIf="chartCurrencyData" id="canvasEUR">{{ chart }}</canvas>
+      </div>
+      <div class="chart__wrap">
+        <canvas *ngIf="chartCurrencyData" id="canvasHRK">{{ chart }}</canvas>
+      </div>
+    </div>
+  </div>
+</main>
