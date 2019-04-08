@@ -10,7 +10,7 @@ export class ApiService {
 
   public getData() {
     return this.http.get(
-      `https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,DASH&tsyms=BTC,USD,EUR,HRK&api_key=˛${this.API_KEY}`
+      `https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,BTC&tsyms=USD,EUR,HRK&api_key=˛${this.API_KEY}`
     )
   }
 

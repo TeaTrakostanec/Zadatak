@@ -25,7 +25,7 @@ export class TableComponent implements OnInit {
   public xAxisLables: Array<string> = [];
 
   private labelColor = {
-    DASH: '#061b3d',
+    BTC: '#061b3d',
     ETH: '#d94511'
   };
 
