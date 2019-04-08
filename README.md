@@ -1,3 +1,10 @@
+
+STRAT project
+
+- clone
+- npm install
+- ng serve --o (it will automatically open on `http://localhost:4200/`)
+
 # Zadatak
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
